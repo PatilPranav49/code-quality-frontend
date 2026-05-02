@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://13.235.21.152:30050";
+const API_BASE_URL = "/api";
 
 const request = async (path) => {
   const response = await fetch(`${API_BASE_URL}${path}`);
@@ -11,6 +11,6 @@ const request = async (path) => {
 };
 
 // ✅ CORRECT ENDPOINTS
-export const fetchProjects = () => request("/api/projects");
-export const fetchDeveloperScores = () => request("/api/developers/scores");
-export const fetchHealth = () => request("/api/health");
+export const fetchProjects = () => request("/projects");
+export const fetchDeveloperScores = () => request("/developers/scores");
+export const fetchHealth = () => request("/health");
